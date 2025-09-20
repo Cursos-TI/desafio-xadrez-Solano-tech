@@ -12,7 +12,8 @@ int main() {
     int casaTorre = 5;
     int casaBispo = 5;
     int casaRainha = 8;
-    int i = 1;
+    int casaCavalo = 1;
+    int i, j = 1;
     int opcao;
     
     // Escolher a peça que será movimentada
@@ -20,17 +21,20 @@ int main() {
     printf("1. Bispo\n");
     printf("2. Torre\n");
     printf("3. Rainha\n");
+    printf("4. Cavalo\n");
     printf("Selecione a peça a ser movimentada: ");
     scanf("%d", &opcao);
     
-    switch(opcao){
+    switch(opcao)
+    {
         case 1:
             // Implementação de Movimentação do Bispo
             // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.  
-            printf("Peça escolhida: BISPO - Mover %d casas na diagonal superior direita\n", casaBispo);
+            printf("Peça escolhida:\n");
+            printf("BISPO - Mover %d casas na diagonal superior direita\n", casaBispo);
             while (i <= casaBispo)
             {
-                printf("%d- Superior e Direita\n", i);
+                printf("Cima e Direita\n");
                 //printf("Direita\n");
                 //printf("%d\n", i);
                 i++;
@@ -40,10 +44,11 @@ int main() {
         case 2:
             // Implementação de Movimentação da Torre
             // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-            printf("Peça escolhida: TORRE - Mover %d casas para direita\n", casaTorre);
+            printf("Peça escolhida:\n");
+            printf("TORRE - Mover %d casas para direita\n", casaTorre);
             do
             {
-                printf("%d- Direita\n", i);
+                printf("Direita\n");
                 i++;
             } while (i <= casaTorre);
                        
@@ -52,12 +57,28 @@ int main() {
         case 3:
             // Implementação de Movimentação da Rainha
             // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-            printf("Peça escolhida: RAINHA - Mover %d casas para esquerda\n", casaRainha);
+            printf("Peça escolhida:\n");
+            printf("RAINHA - Mover %d casas para esquerda\n", casaRainha);
             for (i = 1; i <= casaRainha; i++)
             {
-                printf("%d- Esquerda\n", i);
+                printf("Esquerda\n");
             }
             
+        break;
+
+        case 4:
+            // Implementação de Movimentação do Cavalo
+            // Sugestão: Utilize uma estrutura de repetição aninhada para simular a movimentação do cavalo.
+            printf("Peça escolhida:\n");
+            printf("CAVALO - Fazer o movimento em L\n", casaCavalo);
+            while (casaCavalo--)
+            {
+                for (i = 1; i <= 2; i++)
+                {
+                    printf("Cima\n");
+                }
+            printf("Direita\n");
+            }
         break;
 
         default:
